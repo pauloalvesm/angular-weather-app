@@ -1,9 +1,11 @@
 <div class="search">
+  <span class="title-home">Weather Forecast</span>
   <form #form="ngForm" (submit)="onSubmit()">
     <input
       type="text"
       placeholder="Search location"
       name="city"
+      class="input-city"
       [(ngModel)]="initialCityName"
     />
 
