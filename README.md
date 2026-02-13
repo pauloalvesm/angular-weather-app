@@ -6,7 +6,20 @@
 
 ## 💻 Project
 
-Repository with web application to display the weather in a city specified by the user.
+Repository with web application to display the weather in a city specified by the user. The project's source code was based on the course [Formação Angular](https://www.udemy.com/course/curso-de-angular-15-do-iniciante-ao-especialista/). 
+
+## 📘 Features
+
+This application allows the user to:
+
+- Enter the name of the city in the search field.
+- Enter the minimum and maximum temperatures (°C).
+- Display the humidity (%).
+- Display the wind speed (km/h).
+
+## ✅ Technical Decisions
+
+- I tried to maintain the same project structure that was presented during classes, adding the use of the `Animate.css` library to give the application more illustration.
 
 ## 🚀 Technologies and Tools
 
@@ -16,6 +29,9 @@ This project was developed using the following technologies:
   - `Angular CLI v19.2.19`
   - `Node.js v22.13.1`
   - `NPM v11.1.0`
+  - `OpenWeather API`
+  - `Animate.css`
+  - `Fontawesome`
  
 ## 💾 How to Run Locally
 
@@ -32,6 +48,21 @@ npm install
 # Run the project
 ng s -o
 ```
+
+## ℹ️ Implement API key
+
+In the `src` project folder, add the `environment.ts` file. You will need to use an `OpenWeather API` key to use its resources with the following structure:
+
+```bash
+export const environment = {
+  production: false,
+  apiKey: 'Your_Key',
+};
+```
+
+## 📷 Screenshot
+
+<p align="center"> <img src="https://github.com/pauloalvesm/angular-weather-app/blob/master/public/images/screenshot.png?raw=true"/></p>
 
 ## 👤 Author
 
