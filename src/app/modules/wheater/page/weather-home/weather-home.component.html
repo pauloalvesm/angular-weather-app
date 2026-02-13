@@ -1,9 +1,11 @@
 <div class="search">
+  <span class="title-home">Weather Forecast</span>
   <form #form="ngForm" (submit)="onSubmit()">
     <input
       type="text"
       placeholder="Search location"
       name="city"
+      class="input-city"
       [(ngModel)]="initialCityName"
     />
 
@@ -16,5 +18,18 @@
         title="Search"
       ></fa-icon>
     </span>
+
+    <span *ngIf="initialCityName || weatherData" (click)="clearSearch()">
+      <fa-icon
+        size="lg"
+        class="search-icon clear-icon"
+        [icon]="clearIcon"
+        title="Clear Search"
+        style="color: #FF0000; margin-left: 10px; cursor: pointer;"
+      ></fa-icon>
+    </span>
+
   </form>
 </div>
+
+<app-weather-card *ngIf="weatherData" [weatherDataInput]="weatherData"></app-weather-card>
