@@ -18,6 +18,17 @@
         title="Search"
       ></fa-icon>
     </span>
+
+    <span *ngIf="initialCityName || weatherData" (click)="clearSearch()">
+      <fa-icon
+        size="lg"
+        class="search-icon clear-icon"
+        [icon]="clearIcon"
+        title="Clear Search"
+        style="color: #FF0000; margin-left: 10px; cursor: pointer;"
+      ></fa-icon>
+    </span>
+
   </form>
 </div>
 
